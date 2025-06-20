@@ -1,22 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
 
 function App() {
   return (
-    <Router>
-      <nav style={{ padding: '1rem', background: '#eee' }}>
-        <Link to="/" style={{ marginRight: 10 }}>Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-      <div style={{ padding: '2rem' }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </Router>
+    <div style={{ textAlign: 'center', marginTop: '5rem' }}>
+      <h1>Hello from Dockerized CRA 🎉</h1>
+      <p>This React app is served using Nginx in a multi-stage Docker container.</p>
+    </div>
   );
 }
 
